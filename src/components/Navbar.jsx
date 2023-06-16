@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
-
+import { FaShoppingCart } from 'react-icons/fa';
 import logo from '../assets/icons/img.png';
 
-const Navbar = ({ user, signOut }) => {
+
+const Navbar = ({ user, signOut, cartItemCount }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef(null);
 
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -81,7 +83,7 @@ const Navbar = ({ user, signOut }) => {
                 }`}
                 onClick={() => setShowMenu(false)}
               >
-                Contact
+                Con
               </NavLink>
             </li>
           </ul>
@@ -163,6 +165,15 @@ const Navbar = ({ user, signOut }) => {
           >
             Log out
           </button>
+        </div>
+      )}
+      {cartItemCount > 0 && (
+        <div className="relative">
+          <FaShoppingCart className="text-gray-700 cursor-pointer" />
+          <span className="absolute -top-1 -right-1 bg-red-500 text-black rounded-full px-1 text-xs">
+            {cartItemCount}
+          </span>
+          as
         </div>
       )}
     </nav>
