@@ -66,9 +66,9 @@ const Navbar = ({ user, signOut, cartItemCount }) => {
           <ul className="flex items-center ml-auto">
             <li className="mr-2">
               <NavLink
-                to="/category2"
+                to="/Services"
                 className={`hover:text-gray-500 transition-colors ${
-                  location.pathname === '/category2' ? 'text-green-400' : ''
+                  location.pathname === '/Services' ? 'text-green-400' : ''
                 }`}
                 onClick={() => setShowMenu(false)}
               >
@@ -77,13 +77,13 @@ const Navbar = ({ user, signOut, cartItemCount }) => {
             </li>
             <li className="mr-2">
               <NavLink
-                to="/category3"
+                to="/contact"
                 className={`hover:text-gray-500 transition-colors ${
-                  location.pathname === '/category3' ? 'text-green-400' : ''
+                  location.pathname === '/Contact' ? 'text-green-400' : ''
                 }`}
                 onClick={() => setShowMenu(false)}
               >
-                Con
+                Contact
               </NavLink>
             </li>
           </ul>
@@ -117,24 +117,24 @@ const Navbar = ({ user, signOut, cartItemCount }) => {
                 </p>
                 <div className="bg-gray-100 rounded p-2 mb-2">
                   <NavLink
-                    to="/category2"
+                    to="/services"
                     className={`hover:text-gray-500 transition-colors ${
-                      location.pathname === '/category2' ? 'text-green-400' : ''
+                      location.pathname === '/contact' ? 'text-green-400' : ''
                     }`}
-                    onClick={() => handleCategoryClick('category2')}
+                    onClick={() => handleCategoryClick('contact')}
                   >
-                    Category 2
+                    Services
                   </NavLink>
                 </div>
                 <div className="bg-gray-100 rounded p-2 mb-2">
                   <NavLink
-                    to="/category3"
+                    to="/Contact"
                     className={`hover:text-gray-500 transition-colors ${
-                      location.pathname === '/category3' ? 'text-green-400' : ''
+                      location.pathname === '/contact' ? 'text-green-400' : ''
                     }`}
-                    onClick={() => handleCategoryClick('category3')}
+                    onClick={() => handleCategoryClick('contact')}
                   >
-                    Category 3
+                    Contact
                   </NavLink>
                 </div>
                 <div className="bg-gray-100 rounded p-2 mb-2">

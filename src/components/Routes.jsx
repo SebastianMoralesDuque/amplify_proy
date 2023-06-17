@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import Category2 from './Category2';
-import Category3 from './Category3';
+import Services from './Services';
+import Contact from './Contact';
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Category2" element={<Category2 />} />
-      <Route path="/Category3" element={<Category3 />} />
+      <Route path="/Services" element={<Services />} />
+      <Route path="/Contact" element={<Contact />} />
     </Routes>
   );
 };
